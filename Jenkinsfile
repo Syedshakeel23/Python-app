@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh ' docker build -t vatsraj/pythonapp:$BUILD_NUMBER .'
+                sh ' docker build -t syed411/pythonapp:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh ' docker push vatsraj/pythonapp:$BUILD_NUMBER'
+                sh ' docker push syed411/pythonapp:$BUILD_NUMBER'
             }
         }
 }
